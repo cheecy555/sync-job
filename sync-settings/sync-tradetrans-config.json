@@ -1,0 +1,168 @@
+{  
+  "Demopest": {
+				"tradetrans":{					
+					"columnlookup":[
+								{
+                            		"column":"Doc_Type",  
+                            		"apipath":"/api/data/GXG6bu58QVie4g0ER1WKYw?find=%7B%22type%22%3A2%2C%22name%22%3A%7B%22%24in%22%3A%5B",
+                            		"matchfield":"name",
+                            		"returnfield":"id",
+									"selfmap":true,
+									"selfmaparray": {"Supplier Invoice":"Purchase Invoice"},
+									"LookupFieldReturnNoValueAction":"Log"
+                        		},
+								{
+									"column":"OGCode",		
+									"apipath":"/api/data/GXG6bu58QVie4g0ER1WKYw?find=%7B%22type%22%3A3%2C%22code%22%3A%7B%22%24in%22%3A%5B",
+									"matchfield":"code",
+                            		"returnfield":"id",
+									"selfmap":false,
+									"selfmaparray": null,
+									"LookupFieldReturnNoValueAction":"Log"
+								},
+								{
+									"column":"AccNo",		
+									"apipath":"/api/data/07G2C7CjRRysmY1Ob7ZbCw?find=%7B%22type%22%3A31%2C%22code%22%3A%7B%22%24in%22%3A%5B",	
+									"matchfield":"code",
+                            		"returnfield":"id",											
+									"selfmap":false,
+									"selfmaparray": null,
+									"LookupFieldReturnNoValueAction":"Log"
+								},
+								{
+									"column":"Currency",	
+									"apipath":"/api/data/GXG6bu58QVie4g0ER1WKYw?find=%7B%22type%22%3A4%2C%22code%22%3A%7B%22%24in%22%3A%5B",
+									"matchfield":"code",
+                            		"returnfield":"id",
+									"selfmap":false,
+									"selfmaparray": null,
+									"LookupFieldReturnNoValueAction":"Log"									
+								},
+								{
+									"column":"Terms",		
+									"apipath":"/api/data/GXG6bu58QVie4g0ER1WKYw?find=%7B%22type%22%3A101%2C%22code%22%3A%7B%22%24in%22%3A%5B",
+									"matchfield":"code",
+                            		"returnfield":"id",
+									"selfmap":false, 
+									"selfmaparray": null,
+									"LookupFieldReturnNoValueAction":"Log"								
+								},
+								{
+									"column":"Status",
+									"apipath":"/api/data/GXG6bu58QVie4g0ER1WKYw?find=%7B%22type%22%3A310%2C%22val%22%3A2%2C%22name%22%3A%7B%22%24in%22%3A%5B",
+									"matchfield":"name",
+                            		"returnfield":"id",
+									"selfmap":true, 
+									"selfmaparray": {"Posted":"Confirmed", "Cancelled":"Cancelled","Active":"Draft"},
+									"LookupFieldReturnNoValueAction":"Log"
+								},
+								{
+									"column":"Item",		
+									"apipath":"/api/data/vgn7ZJBdSc-4ytL2eNoEOQ?find=%7B%22item.code%22%3A%7B%22%24in%22%3A%5B",
+									"matchfield":"item.code",
+                            		"returnfield":"id",
+									"defaultValueIfParamNull":true,
+									"selfmap":false,
+									"selfmaparray": null,
+									"LookupFieldReturnNoValueAction":"Log"
+								},
+								{
+									"column":"Z_UOM",		
+									"apipath":"/api/data/GXG6bu58QVie4g0ER1WKYw?find=%7B%22type%22%3A209%2C%22code%22%3A%7B%22%24in%22%3A%5B",
+									"matchfield":"code",
+                            		"returnfield":"id",
+									"selfmap":true,
+									"selfmaparray": {"month":"mnt"},
+									"LookupFieldReturnNoValueAction":"Log"
+								},
+								{
+									"column":"Tax1",
+									"apipath":"/api/data/07G2C7CjRRysmY1Ob7ZbCw?find=%7B%22type%22%3A60%2C%22code%22%3A%7B%22%24in%22%3A%5B",
+									"matchfield":"code",
+                            		"returnfield":"id",
+									"selfmap":false,
+									"selfmaparray": null,
+									"LookupFieldReturnNoValueAction":"Log"
+								}
+					],
+					"targetpayload":[
+						{ "key": "docNo", "map":"", "updated":false, "value":null, "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":"Doc_No"},
+						{ "key": "typeId", "map":"Doc_Type", "updated":false, "value":null, "lookupsourcefield":"id", "isdata":false, "rowsourcefield":""},
+						{ "key": "folderId", "map":"OGCode", "updated":false, "value":null, "lookupsourcefield":"id", "isdata":false, "defaultvalue":"", "rowsourcefield":""},
+						{ "key": "billInfo", "map":"AccNo", "updated":false, "value":null, "lookupsourcefield":"id", "isdata":false, "rowsourcefield":""},
+						{ "key": "shipInfo", "map":"AccNo", "updated":false, "value":null, "lookupsourcefield":"id", "isdata":false, "rowsourcefield":""},
+						{ "key": "currency", "map":"Currency", "updated":false, "value":null, "lookupsourcefield":"id", "isdata":false, "rowsourcefield":""},							
+						{ "key": "date", "map":"", "updated":false, "value":null, "lookupsourcefield":"", "isdata":false, "rowsourcefield":"DocDT"},	
+						{ "key": "data", "map":"", "updated":false, "value":null, "lookupsourcefield":"", "isdata":true, "datamap":"transpayloaddata", "rowsourcefield":""},	
+						{ "key": "custom", "map":"", "updated":false, "value":null, "lookupsourcefield":"", "isdata":true, "datamap":"transpayloadcustom", "rowsourcefield":""},	
+						{ "key": "yourref", "map":"", "updated":true, "value":null, "lookupsourcefield":"", "isdata":false, "rowsourcefield":"RefNo"},	
+						{ "key": "Status", "map":"Status", "updated":false, "value":null, "lookupsourcefield":"id", "isdata":false, "rowsourcefield":""},					
+						{ "key": "lines", "map":"", "updated":false, "value":null, "lookupsourcefield":"", "isdata":true, "datamap":"transpayloadline", "rowsourcefield":""}
+					],
+					"transpayloadline":[
+						{ "key": "id", "map":"", "updated":false, "value":null, "lookupsourcefield":"", "isdata":false, "rowsourcefield":""},
+						{ "key": "acctid", "map":"Item", "updated":false, "value":null, "lookupsourcefield":"item.id", "isdata":false, "rowsourcefield":""},
+						{ "key": "taxId", "map":"Tax1", "updated":false, "value":null, "lookupsourcefield":"id", "isdata":false, "datamap":"", "rowsourcefield":""},	
+						{ "key": "uomId", "map":"Z_UOM", "updated":false, "value":null, "lookupsourcefield":"id", "isdata":false, "rowsourcefield":""},
+						{ "key": "price", "map":"", "updated":false, "value":null, "lookupsourcefield":"", "isdata":false, "rowsourcefield":"Price", "defaultValueIfNull":0},
+						{ "key": "qty", "map":"", "updated":false, "value":null, "lookupsourcefield":"", "isdata":false, "rowsourcefield":"Qty", "defaultValueIfNull":0},
+						{ "key": "amount", "map":"", "updated":false, "value":null, "lookupsourcefield":"", "isdata":false, "rowsourcefield":"Amount", "defaultValueIfNull":0},
+						{ "key": "description", "map":"", "updated":false, "value":null, "lookupsourcefield":"", "isdata":false, "rowsourcefield":"Trx_Desc", "defaultValueIfNull":null},
+						{ "key": "tax", "map":"", "updated":false, "value":null, "lookupsourcefield":"", "isdata":false, "rowsourcefield":"Tax1_Amount", "defaultValueIfNull":0},
+						{ "key": "disc", "map":"", "updated":false, "value":null, "lookupsourcefield":"", "isdata":false, "rowsourcefield":"Z_ODisc", "defaultValueIfNull":0},
+						{ "key": "nett", "map":"", "updated":false, "value":null, "lookupsourcefield":"", "isdata":false, "rowsourcefield":"Amount", "calculated":true, "sum":["Amount","Tax1_Amount"], "deduct":["Z_ODisc"]},
+						{ "key": "flags", "map":"", "updated":true, "value":"", "lookupsourcefield":"", "isdata":false, "rowsourcefield":""}										
+					],
+					"transpayloaddata":[
+						{ "key": "forexrate", "map":"", "updated":false, "value":null, "lookupsourcefield":"", "isdata":false, "rowsourcefield":"ex_rate", "defaultValueIfNull":1}
+					],
+					"transpayloadlinefooter":[
+						{ "key": "id", "map":"", "updated":false, "value":null, "lookupsourcefield":"", "isdata":false, "rowsourcefield":""},
+						{ "key": "acctid", "map":"", "updated":false, "value":null, "lookupsourcefield":"", "isdata":false, "rowsourcefield":""},
+						{ "key": "price", "map":"", "updated":false, "value":null, "lookupsourcefield":"", "isdata":false, "rowsourcefield":""},
+						{ "key": "qty", "map":"", "updated":false, "value":null, "lookupsourcefield":"", "isdata":false, "rowsourcefield":""},
+						{ "key": "amount", "map":"", "updated":false, "value":null, "lookupsourcefield":"", "isdata":false, "rowsourcefield":""},
+						{ "key": "tax", "map":"", "updated":false, "value":null, "lookupsourcefield":"", "isdata":false, "rowsourcefield":""},
+						{ "key": "disc", "map":"", "updated":false, "value":null, "lookupsourcefield":"", "isdata":false, "rowsourcefield":""},
+						{ "key": "nett", "map":"", "updated":false, "value":null, "lookupsourcefield":"", "isdata":false, "rowsourcefield":""},
+						{ "key": "flags", "map":"", "updated":false, "value":null, "lookupsourcefield":"", "isdata":false, "rowsourcefield":""}
+					],
+					"transpayloadcustom":[
+						{ "key": "term", "map":"Terms", "updated":false, "value":null, "lookupsourcefield":"id", "isdata":false, "rowsourcefield":""}
+					],
+					"transpayloadlineaccount":[
+						{ "key": "id", "map":"Item", "updated":false, "value":null, "lookupsourcefield":"item.id", "isdata":false, "rowsourcefield":""},
+						{ "key": "name", "map":"Item", "updated":false, "value":null, "lookupsourcefield":"item.name", "isdata":false, "rowsourcefield":""},
+						{ "key": "code", "map":"Item", "updated":false, "value":null, "lookupsourcefield":"item.code", "isdata":false, "rowsourcefield":""}
+					],
+					"transpayloadlinetaxId":[
+						{ "key": "id", "map":"", "updated":true, "value":null, "lookupsourcefield":"", "isdata":false, "rowsourcefield":""},
+						{ "key": "name", "map":"", "updated":true, "value":null, "lookupsourcefield":"", "isdata":false, "rowsourcefield":""},
+						{ "key": "code", "map":"", "updated":true, "value":null, "lookupsourcefield":"", "isdata":false, "rowsourcefield":""},
+						{ "key": "val", "map":"", "updated":true, "value":null, "lookupsourcefield":"", "isdata":false, "rowsourcefield":""}
+					],
+					"transpayloadlinetaxfooter":[
+						{ "key": "id", "map":"", "updated":false, "value":null, "lookupsourcefield":"", "isdata":false, "rowsourcefield":""},
+						{ "key": "acctid", "map":"", "updated":false, "value":null, "lookupsourcefield":"", "isdata":false, "rowsourcefield":""},
+						{ "key": "price", "map":"", "updated":false, "value":null, "lookupsourcefield":"", "isdata":false, "rowsourcefield":""},
+						{ "key": "qty", "map":"", "updated":true, "value":1, "lookupsourcefield":"", "isdata":false, "rowsourcefield":""},
+						{ "key": "amount", "map":"", "updated":false, "value":null, "lookupsourcefield":"", "isdata":false, "rowsourcefield":""},
+						{ "key": "tax", "map":"", "updated":true, "value":0, "lookupsourcefield":"", "isdata":false, "rowsourcefield":""},
+						{ "key": "disc", "map":"", "updated":true, "value":0, "lookupsourcefield":"", "isdata":false, "rowsourcefield":""},
+						{ "key": "nett", "map":"", "updated":false, "value":null, "lookupsourcefield":"", "isdata":false, "rowsourcefield":""},
+						{ "key": "flags", "map":"", "updated":true, "value":"FT", "lookupsourcefield":"", "isdata":false, "rowsourcefield":""}
+					],
+					"transpayloadlinediscountfooter":[
+						{ "key": "id", "map":"", "updated":false, "value":null, "lookupsourcefield":"", "isdata":false, "rowsourcefield":""},
+						{ "key": "acctid", "map":"", "updated":false, "value":null, "lookupsourcefield":"", "isdata":false, "rowsourcefield":""},
+						{ "key": "price", "map":"", "updated":false, "value":null, "lookupsourcefield":"", "isdata":false, "rowsourcefield":""},
+						{ "key": "qty", "map":"", "updated":true, "value":1, "lookupsourcefield":"", "isdata":false, "rowsourcefield":""},
+						{ "key": "amount", "map":"", "updated":false, "value":null, "lookupsourcefield":"", "isdata":false, "rowsourcefield":""},
+						{ "key": "tax", "map":"", "updated":true, "value":0, "lookupsourcefield":"", "isdata":false, "rowsourcefield":""},
+						{ "key": "disc", "map":"", "updated":true, "value":0, "lookupsourcefield":"", "isdata":false, "rowsourcefield":""},
+						{ "key": "nett", "map":"", "updated":false, "value":null, "lookupsourcefield":"", "isdata":false, "rowsourcefield":""},
+						{ "key": "flags", "map":"", "updated":true, "value":"FD", "lookupsourcefield":"", "isdata":false, "rowsourcefield":""}
+					]
+				}
+  			}
+}

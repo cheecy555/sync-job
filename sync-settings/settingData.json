@@ -1,0 +1,14 @@
+{
+    "dbpath":"Server=LAPTOP-FK3VNVB3;User Id=admin;Password=password;Trusted_Connection=True;trustServerCertificate=true;request timeout=120000;",
+    "dbtype":"",
+    "BASEURL":"",
+    "authkey":"",
+    "contactsubmiturl":"/api/contact",
+    "journalsubmiturl":"/api/journal",
+    "itemsubmiturl":"/api/item",
+    "subcontactsubmiturl":"/api/contact/[param]/info",
+    "defaultfolderId":"AAAAAwAAQACAAAAAAAAAAQ",
+    "TradeTranstrxDTFrom":"",
+    "TradeTranstrxDTTo":"",
+    "QueryLimit":""
+}

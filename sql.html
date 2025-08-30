@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL</title>
+    <style>
+	tr {
+	  	border-bottom: 1px solid #ddd;
+    		display: table-row;
+    		vertical-align: inherit;
+    		unicode-bidi: isolate;
+    		border-color: inherit;
+	}
+	tr:hover {background-color: #D6EEEE;}
+        th{
+		background-color: rgba(150, 212, 212,0.4)
+        }
+.tbl {
+  font-size:15px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.tbl,
+.tbl th,
+.tbl td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+    </style>
+</head>
+<body>
+    <div>
+	<label for="query">Query:</label><br>
+	<textarea id="query" name="query" rows="4" cols="150"></textarea><br>
+	<button id="btn" name="btn" value="submit" onclick="javascript:runsql()">Submit</button
+    </div>
+    <div>
+    	<table id="result" class="tbl">
+    	</table>
+    </div>
+</body>
+</html>
+
+
+<script language="javascript">
+function runsql(){
+	try {
+	let query = document.querySelector('#query')
+
+	fetch(window.location.href,{
+		method: "POST",
+		body: query.value,
+	  	headers: {"Content-type": "text/html; charset=UTF-8"}
+	})
+	.then(response => response.json())
+	.then(data => {
+        	console.log(data);
+		//let data = JSON.parse(query.value)
+	        let table = document.querySelector('#result')
+	        table.innerHTML=''
+	        let i = 0
+		let cols = []
+	        data.forEach(row => {
+		        let tr = document.createElement('tr');
+			if (i<=0){
+				cols = Object.keys(row)
+				cols.forEach(col => {
+					let th = document.createElement('th')
+	                                th.innerText = col
+					tr.appendChild(th)
+				})
+				table.appendChild(tr)
+				tr = document.createElement('tr');
+			}
+			cols.forEach(col => {
+				let td = document.createElement('td')
+	                        td.innerText = row[col]
+				tr.appendChild(td)
+			})
+			table.appendChild(tr)
+			i++
+	        })
+	});
+	} catch (error) {
+		console.error("Fetch failed:", error.message);
+	}
+
+}
+
+</script>

@@ -1,0 +1,100 @@
+{  
+  "Demopest": {
+				"Items":{					
+                    "columnlookup":[
+                        {
+                            "column":"Class",
+                            "apipath":"/api/data/GXG6bu58QVie4g0ER1WKYw?find=%7B%22type%22%3A230%2C%22name%22%3A%7B%22%24in%22%3A%5B",
+                            "matchfield":"name",
+                            "returnfield":"id",
+                            "LookupFieldReturnNoValueAction":"Log",
+                            "selfmap":true, 
+							"selfmaparray": {"Packages":"Package", "Consumable":"Consumables"}
+                        },
+                        {
+                            "column":"OGCode",
+                            "apipath":"/api/data/GXG6bu58QVie4g0ER1WKYw?find=%7B%22type%22%3A3%2C%22code%22%3A%7B%22%24in%22%3A%5B",
+                            "matchfield":"code",
+                            "returnfield":"id",
+                            "LookupFieldReturnNoValueAction":"Continue"
+                        },
+                        {
+                            "column":"UOM",
+                            "apipath":"/api/data/GXG6bu58QVie4g0ER1WKYw?find=%7B%22type%22%3A209%2C%22code%22%3A%7B%22%24in%22%3A%5B",
+                            "matchfield":"code",
+                            "returnfield":"id",
+                            "LookupFieldReturnNoValueAction":"Log"
+                        },
+                        {
+                            "column":"OutTax1",
+                            "apipath":"/api/data/AAAACQAAQAmAAAAAAAAAAQ?find=%7B%22type%22%3A60%2C%22name%22%3A%7B%22%24in%22%3A%5B",
+                            "matchfield":"name",
+                            "returnfield":"id",
+                            "LookupFieldReturnNoValueAction":"Continue"
+                        },
+                        {
+                            "column":"InTax1",
+                            "apipath":"/api/data/AAAACQAAQAmAAAAAAAAAAQ?find=%7B%22type%22%3A60%2C%22name%22%3A%7B%22%24in%22%3A%5B",
+                            "matchfield":"name",
+                            "returnfield":"id",
+                            "LookupFieldReturnNoValueAction":"Continue"
+                        },
+                         {
+                            "column":"Brand",
+                            "apipath":"/api/data/GXG6bu58QVie4g0ER1WKYw?find=%7B%22type%22%3A234%2C%22name%22%3A%7B%22%24in%22%3A%5B",
+                            "matchfield":"name",
+                            "returnfield":"id",
+                            "LookupFieldReturnNoValueAction":"Continue"
+                        }
+                    ],
+					"targetpayload":[
+                        { "key": "name", "map":"", "updated":false, "value":null, "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":"Name"},
+                        { "key": "data", "map":"", "updated":false, "value":null, "lookupsourcefield":"", "isdata":true, "datamap":"itemdata", "rowsourcefield":""},
+                        { "key": "flags", "map":"", "updated":true, "value":"", "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":""},
+                        { "key": "model", "map":"", "updated":false, "value":null, "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":"Model"},
+                        { "key": "code", "map":"", "updated":false, "value":null, "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":"", "fieldselection":true, "primaryfield":"Barcode","alternatefield":"Code"},
+                        { "key": "brand", "map":"Brand", "updated":false, "value":null, "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":""},
+                        { "key": "typeId", "map":"Class", "updated":false, "value":null, "lookupsourcefield":"id", "isdata":false, "datamap":"", "rowsourcefield":""},
+                        { "key": "notes", "map":"", "updated":false, "value":null, "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":"Notes"},
+                        { "key": "folderId", "map":"OGCode", "updated":false, "value":null, "lookupsourcefield":"id", "isdata":false, "datamap":"", "rowsourcefield":"", "defaultValueIfNull":"A"},
+                        { "key": "uomId", "map":"UOM", "updated":false, "value":null, "lookupsourcefield":"id", "isdata":false, "datamap":"", "rowsourcefield":""},
+                        { "key": "attach", "map":"", "updated":true, "value":[], "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":""},
+                        { "key": "natures", "map":"", "updated":true, "value":[], "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":""},
+                        { "key": "accNo", "map":"", "updated":false, "value":null, "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":"Code"},
+                        { "key": "custom", "map":"", "updated":true, "value":{}, "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":""}
+					],
+                    "itemdata":[
+                        { "key": "dilution", "map":"", "updated":true, "value":[], "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":""},
+                        { "key": "start", "map":"", "updated":false, "value":null, "lookupsourcefield":"", "isdata":true, "datamap":"itemdatastart", "rowsourcefield":""},
+                        { "key": "end", "map":"", "updated":false, "value":null, "lookupsourcefield":"", "isdata":true, "datamap":"itemdataend", "rowsourcefield":""},
+                        { "key": "defloc", "map":"", "updated":true, "value":null, "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":""},
+                        { "key": "stationType", "map":"", "updated":true, "value":"", "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":""},
+                        { "key": "depreciateId", "map":"", "updated":true, "value":"", "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":""},
+                        { "key": "checklists", "map":"", "updated":true, "value":[], "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":""},
+                        { "key": "autoGenSKU", "map":"", "updated":true, "value":false, "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":""},
+                        { "key": "nextItems", "map":"", "updated":true, "value":[], "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":""},
+                        { "key": "purchase", "map":"", "updated":false, "value":null, "lookupsourcefield":"", "isdata":true, "datamap":"itemdatapurchase", "rowsourcefield":""},
+                        { "key": "sale", "map":"", "updated":false, "value":null, "lookupsourcefield":"", "isdata":true, "datamap":"itemdatasale", "rowsourcefield":""},
+                        { "key": "writeup", "map":"", "updated":false, "value":null, "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":"Notes"},
+                        { "key": "htmlWriteup", "map":"", "updated":false, "value":null, "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":"Notes"},
+                        { "key": "lockUom", "map":"", "updated":true, "value":false, "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":""},
+                        { "key": "tagformat", "map":"", "updated":true, "value":[], "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":""},
+                        { "key": "cost", "map":"", "updated":true, "value":"FA", "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":""}  
+                    ],
+                    "itemdatastart":[
+                        { "key": "sales", "map":"", "updated":true, "value":null, "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":""},
+                        { "key": "purchase", "map":"", "updated":true, "value":null, "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":""}
+                    ],
+                    "itemdataend":[
+                        { "key": "sales", "map":"", "updated":true, "value":null, "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":""},
+                        { "key": "purchase", "map":"", "updated":true, "value":null, "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":""}
+                    ],
+                    "itemdatapurchase":[
+                        { "key": "tax", "map":"OutTax1", "updated":false, "value":null, "lookupsourcefield":"id", "isdata":false, "datamap":"", "rowsourcefield":""}
+                    ],
+                    "itemdatasale":[
+                        { "key": "tax", "map":"InTax1", "updated":false, "value":null, "lookupsourcefield":"id", "isdata":false, "datamap":"", "rowsourcefield":""}
+                    ]
+                }
+            }
+        }

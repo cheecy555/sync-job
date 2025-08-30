@@ -1,0 +1,125 @@
+{  
+  "Demopest": {
+				"SubContacts":{					
+                    "columnlookup":[
+                        {
+                            "column":"Zone",
+                            "apipath":"/api/data/GXG6bu58QVie4g0ER1WKYw?find=%7B%22type%22%3A41%2C%22name%22%3A%7B%22%24in%22%3A%5B",
+                            "matchfield":"name",
+                            "returnfield":"id",
+                            "LookupFieldReturnNoValueAction":"Log"
+                        },
+                        {
+                            "column":"Country",
+                            "apipath":"/api/data/GXG6bu58QVie4g0ER1WKYw?find=%7B%22type%22%3A108%2C%22name%22%3A%7B%22%24in%22%3A%5B",
+                            "matchfield":"name",
+                            "returnfield":"",
+                            "LookupFieldReturnNoValueAction":"Log"
+                        },
+                        {
+                            "column":"Salutation",
+                            "apipath":"/api/data/GXG6bu58QVie4g0ER1WKYw?find=%7B%22type%22%3A216%2C%22code%22%3A%7B%22%24in%22%3A%5B",
+                            "matchfield":"code",
+                            "returnfield":"id",
+                            "LookupFieldReturnNoValueAction":"Log"
+                        }
+                       
+                    ],
+					"targetpayload":[
+                        { "key": "data", "map":"", "updated":false, "value":null, "lookupsourcefield":"", "isdata":true, "datamap":"data", "rowsourcefield":""},
+                        { "key": "notes", "map":"", "updated":false, "value":null, "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":"WebSite"},
+                        { "key": "custom", "map":"", "updated":false, "value":null, "lookupsourcefield":"", "isdata":true, "datamap":"custom", "rowsourcefield":""},
+                        { "key": "main", "map":"", "updated":false, "value":null, "lookupsourcefield":"", "isdata":true, "datamap":"main", "rowsourcefield":""},
+                        { "key": "tags", "map":"", "updated":true, "value":[], "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":""},
+                        { "key": "type", "map":"", "updated":true, "value":"AAAAMQAAQACAADAAAAAAAg", "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":""}
+					],
+                    "data":[
+                        { "key": "phones", "map":"", "updated":false, "value":null, "lookupsourcefield":"", "isdata":true, "datamap":"dataphones", "rowsourcefield":""},
+                        { "key": "emails", "map":"", "updated":false, "value":null, "lookupsourcefield":"", "isdata":true, "datamap":"dataemails", "rowsourcefield":""},
+                        { "key": "address", "map":"", "updated":false, "value":null, "lookupsourcefield":"", "isdata":true, "datamap":"dataaddress", "rowsourcefield":""},
+                        { "key": "contactperson", "map":"", "updated":false, "value":null, "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":"Contact"},
+                        { "key": "salutation", "map":"Salutation", "updated":false, "value":null, "lookupsourcefield":"id", "isdata":false, "datamap":"", "rowsourcefield":""},
+                        { "key": "position", "map":"", "updated":false, "value":null, "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":"Position"},
+                        { "key": "gender", "map":"", "updated":false, "value":null, "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":"Gender", "valuemapping":true, "mappingsoptions":{"M":"Male","F":"Female"}},
+                        { "key": "currency", "map":"", "updated":true, "value":null, "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":""},
+                        { "key": "extras", "map":"", "updated":true, "value":{}, "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":""},
+                        { "key": "tax", "map":"", "updated":false, "value":null, "lookupsourcefield":"", "isdata":true, "datamap":"tax", "rowsourcefield":""},
+                        { "key": "bank", "map":"", "updated":false, "value":null, "lookupsourcefield":"", "isdata":true, "datamap":"bank", "rowsourcefield":""},
+                        { "key": "term", "map":"", "updated":true, "value":null, "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":""},
+                        { "key": "idNo", "map":"", "updated":true, "value":null, "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":""},
+                        { "key": "assignees", "map":"", "updated":true, "value":null, "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":""},
+                        { "key": "team", "map":"", "updated":true, "value":null, "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":""},
+                        { "key": "portal", "map":"", "updated":true, "value":false, "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":""},
+                        { "key": "site", "map":"", "updated":false, "value":null, "lookupsourcefield":"", "isdata":true, "datamap":"site", "rowsourcefield":""},
+                        { "key": "waGroup", "map":"", "updated":false, "value":null, "lookupsourcefield":"", "isdata":true, "datamap":"waGroup", "rowsourcefield":""},
+                        { "key": "blockEmails", "map":"", "updated":true, "value":[], "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":""},
+                        { "key": "blockPhones", "map":"", "updated":true, "value":[], "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":""}
+                    ],
+                    "dataphones":[
+                        { "key": "value", "map":"", "updated":false, "value":null, "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":""},
+                        { "key": "type", "map":"", "updated":false, "value":null, "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":""},
+                        { "key": "notes", "map":"", "updated":true, "value":"site office phone", "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":""},
+                        { "key": "network", "map":"", "updated":true, "value":"MOBILE", "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":""}
+                    ],
+                    "dataemails":[
+                        { "key": "value", "map":"", "updated":false, "value":null, "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":"Email"},
+                        { "key": "type", "map":"", "updated":true, "value":"Work", "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":""},
+                        { "key": "notes", "map":"", "updated":true, "value":"", "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":""},
+                        { "NulifyPayloadWithFieldsNull": true, "fields":["Email"]}
+                    ],
+                    "dataaddress":[
+                        { "key": "geo", "map":"", "updated":true, "value":[0,0], "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":""},
+                        { "key": "zip", "map":"", "updated":false, "value":null, "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":"Post_Code"},
+                        { "key": "city", "map":"", "updated":false, "value":null, "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":"Add3"},
+                        { "key": "zone", "map":"", "updated":false, "value":null, "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":"Zone"},
+                        { "key": "state", "map":"", "updated":false, "value":null, "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":"State"},
+                        { "key": "street", "map":"", "updated":false, "value":null, "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":"Add1,Add2"},
+                        { "key": "zoneId", "map":"Zone", "updated":false, "value":null, "lookupsourcefield":"id", "isdata":false, "datamap":"", "rowsourcefield":""},
+                        { "key": "capital", "map":"", "updated":true, "value":true, "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":""},
+                        { "key": "country", "map":"", "updated":false, "value":null, "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":"Country"},
+                        { "key": "staticMap", "map":"", "updated":true, "value":null, "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":""},
+                        { "key": "country_id", "map":"Country", "updated":false, "value":null, "lookupsourcefield":"id", "isdata":false, "datamap":"", "rowsourcefield":""},
+                        { "key": "fulladdress", "map":"", "updated":false, "value":null, "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":"Add1,Add2,Add3,Post_Code,State"},
+                        { "key": "country_code", "map":"Country", "updated":false, "value":null, "lookupsourcefield":"code", "isdata":false, "datamap":"", "rowsourcefield":""}
+                    ],
+                    "tax":[
+                        { "key": "default", "map":"", "updated":true, "value":null, "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":""},
+                        { "key": "inclusive", "map":"", "updated":true, "value":false, "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":""},
+                        { "key": "taxno", "map":"", "updated":true, "value":"", "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":""}
+                    ],
+                    "bank":[
+                        { "key": "bankname", "map":"", "updated":true, "value":"", "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":""},
+                        { "key": "accname", "map":"", "updated":true, "value":"", "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":""},
+                        { "key": "accno", "map":"", "updated":true, "value":"", "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":""},
+                        { "key": "notes", "map":"", "updated":true, "value":"", "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":""}
+                    ],
+                    "site":[
+                        { "key": "code", "map":"", "updated":false, "value":"", "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":"Site_Code"},
+                        { "key": "name", "map":"", "updated":false, "value":"", "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":"Site_Name"}
+                    ],
+                    "waGroup":[
+                        { "key": "waGroupId", "map":"", "updated":true, "value":null, "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":""},
+                        { "key": "userId", "map":"", "updated":true, "value":null, "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":""},
+                        { "key": "phoneNo", "map":"", "updated":true, "value":null, "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":""}
+                    ],
+                    "custom":[
+                        { "key": "X-pxJxIlRFKu6XtO-sIQGQ", "map":"", "updated":false, "value":null, "lookupsourcefield":"", "isdata":true, "datamap":"XpxJxIlRFKu6XtOsIQGQ", "rowsourcefield":""}
+                    ],
+                    "XpxJxIlRFKu6XtOsIQGQ":[
+                        { "key": "name", "map":"", "updated":true, "value":"Premise Type", "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":""},
+                        { "key": "value", "map":"", "updated":false, "value":null, "lookupsourcefield":"", "isdata":true, "datamap":"customvalue", "rowsourcefield":""},
+                        { "key": "code", "map":"", "updated":true, "value":"PRT", "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":""}
+                    ],
+                    "customvalue":[
+                        { "key": "pass", "map":"", "updated":true, "value":false, "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":""},
+                        { "key": "stamp", "map":"", "updated":true, "value":false, "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":""},
+                        { "key": "premise", "map":"", "updated":false, "value":null, "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":"Premise_Type"}
+                    ],
+                    "main":[
+                        { "key": "email", "map":"", "updated":true, "value":0, "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":""},
+                        { "key": "phone", "map":"", "updated":true, "value":0, "lookupsourcefield":"", "isdata":false, "datamap":"", "rowsourcefield":""}   
+                    ]
+                  
+                }
+            }
+        }
