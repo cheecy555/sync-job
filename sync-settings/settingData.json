@@ -1,5 +1,5 @@
 {
-    "dbpath":"Server=FK3VNVB3;User Id=admin;Password=password;Trusted_Connection=True;trustServerCertificate=true;request timeout=120000;",
+    "dbpath":"Server=FK3VNVB3;User Id=root;Password=$2y$10$Tu9ImODbXvVVtie;Trusted_Connection=True;trustServerCertificate=true;request timeout=120000;",
     "dbtype":"",
     "BASEURL":"",
     "authkey":"",
